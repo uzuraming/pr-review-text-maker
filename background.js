@@ -101,7 +101,6 @@ chrome.contextMenus.onClicked.addListener((item) => {
       return template.id === item.menuItemId;
     });
 
-    console.log(targetTemplate);
     sendCopyText(
       replaceText(item.selectionText, item.pageUrl, targetTemplate.text)
     );

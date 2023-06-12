@@ -26,7 +26,6 @@ function createId() {
 }
 
 function deleteTemplate(e) {
-  console.log(e.target.parentNode.parentNode);
   chrome.storage.local.get("templates", (result) => {
     const filteredTemplates = result.templates.filter((template) => {
       return template.id !== e.target.parentNode.parentNode.id;
@@ -48,7 +47,6 @@ chrome.storage.local.get("templates", (result) => {
       .cloneNode(true);
     clone.id = template.id;
     clone.style.display = "";
-    console.log(clone.querySelector("input"));
     clone.querySelector("input").value = template.title;
     clone.querySelector("textarea").value = template.text;
     clone
@@ -95,8 +93,6 @@ function updateTemplate() {
       form.id
     );
   });
-
-  console.log(Array.from(forms));
   chrome.storage.local.set({
     templates,
   });
