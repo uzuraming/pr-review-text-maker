@@ -1,0 +1,45 @@
+body {
+  min-width: 500px; /* your desired width */
+  max-width: 100%;
+  margin: 0;
+}
+
+.header {
+  background-color: lightblue;
+  display: flex;
+  justify-content: space-between;
+}
+.header button {
+  margin: 1em;
+}
+
+.wrapper {
+  margin: 1em;
+}
+
+.title-input {
+  font: 15px/24px sans-serif;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.3em;
+  transition: 0.3s;
+  letter-spacing: 1px;
+  color: #1d1d1d;
+  border: 1px solid #1b2538;
+  border-radius: 4px;
+  margin-bottom: 0.5em;
+}
+
+.title-input:focus {
+  border: 1px solid #3c3fda;
+  outline: none;
+  box-shadow: 0 0 2px 1px rgba(60, 118, 218, 0.5);
+}
+hr {
+  margin: 1em 0;
+}
+
+.delete-button-box {
+  display: flex;
+  justify-content: end;
+}

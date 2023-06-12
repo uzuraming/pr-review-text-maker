@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="./popup.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">
+        <h2>定型文の編集</h2>
+        <button id="add-button">追加</button>
+      </div>
+      <div id="forms"></div>
+
+      <button id="update-button">更新</button>
+    </div>
+    <div id="template-form-template" style="display: none">
+      <label class="input-label">タイトル</label><br />
+      <input class="title-input" /><br />
+      <label class="input-label">テンプレ文</label><br />
+      <textarea class="title-input"></textarea>
+      <div class="delete-button-box">
+        <button class="delete-button">削除</button>
+      </div>
+      <hr />
+    </div>
+    <script src="./popup.js" defer></script>
+  </body>
+</html>

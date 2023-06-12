@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "github-review-text-maker",
+  "version": "1.0.0",
+  "description": "Pull Requestの文章を生成してくれる拡張機能です。",
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "permissions": [
+    "tabs",
+    "scripting",
+    "contextMenus",
+    "clipboardWrite",
+    "activeTab",
+    "storage"
+  ],
+  "action": {
+    "default_title": "タイトルとURLをコピー",
+    "default_popup": "popup.html"
+  },
+  "host_permissions": ["*://github.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["*://github.com/*"],
+      "js": ["content_scripts.js"]
+    }
+  ]
+}
